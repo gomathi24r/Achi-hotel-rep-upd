@@ -63,7 +63,8 @@ with tab1:
             df.loc[mask, ["Qty", "Price"]] = [qty, price]
             df.to_excel(FILE, index=False)
             st.success("✅ Order Updated Successfully!")
-            st.rerun()
+            #st.rerun()
+            
         else:
             st.error("No matching order found to update!")
 
