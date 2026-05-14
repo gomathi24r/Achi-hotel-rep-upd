@@ -55,7 +55,7 @@ with tab1:
         df = pd.concat([df, new_row], ignore_index=True)
         df.to_excel(FILE, index=False)
         st.success("✅ Order Added Successfully!")
-        
+        st.rerun()
 
     if st.button("✏️ Update Order", use_container_width=True):
         mask = (df["Date"] == str(sel_date)) & (df["Item"] == item) & (df["Mode"] == mode)
