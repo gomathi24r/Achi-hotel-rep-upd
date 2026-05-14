@@ -88,7 +88,7 @@ with tab2:
 
         # Add total qty and amount
         pivot["Total Qty"] = pivot.iloc[:, 1:].sum(axis=1)
-        pivot["Bill Amount"] = pivot["Total Qty"] * pivot["Item"].map(PRICES)
+        pivot["Total Amount"] = pivot["Total Qty"] * pivot["Item"].map(PRICES)
 
         # Add S.No
         pivot.insert(0, "S.No", range(1, len(pivot) + 1))
